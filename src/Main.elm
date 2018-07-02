@@ -17,13 +17,13 @@ type alias Model =
 initialLog : Log
 initialLog =
     [ { text = "cat nonexistantfile"
-      , foregroundLogColor = White
-      , backgroundLogColor = Black
+      , foregroundLogColor = Color.white
+      , backgroundLogColor = Color.black
       , attributes = []
       }
     , { text = "cat: nonexistantfile: No such file or directory"
-      , foregroundLogColor = White
-      , backgroundLogColor = Black
+      , foregroundLogColor = Color.white
+      , backgroundLogColor = Color.black
       , attributes = []
       }
     ]
@@ -44,15 +44,10 @@ type alias Log =
 
 type alias LogLine =
     { text : String
-    , foregroundLogColor : LogColor
-    , backgroundLogColor : LogColor
+    , foregroundLogColor : Color.Color
+    , backgroundLogColor : Color.Color
     , attributes : List Attribute
     }
-
-
-type LogColor
-    = White
-    | Black
 
 
 type Attribute
